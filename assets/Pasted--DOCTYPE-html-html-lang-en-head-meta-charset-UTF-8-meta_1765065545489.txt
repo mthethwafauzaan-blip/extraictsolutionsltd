@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EXTRA ICT SOLUTIONS LTD</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+  <style>
+    :root {
+      --primary: #0056b3;
+      --accent: #00b4d8;
+      --light: #f5f9ff;
+      --dark: #0a192f;
+    }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background-color: var(--light);
+      color: #222;
+      scroll-behavior: smooth;
+    }
+
+    /* HERO */
+    header {
+      text-align: center;
+      background: linear-gradient(to bottom, rgba(0,0,50,0.8), rgba(0,0,80,0.8)),
+                  url('https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 6rem 1rem 7rem;
+      position: relative;
+    }
+    header img {
+      width: 220px;
+      max-width: 80%;
+      margin-bottom: 1rem;
+      background: rgba(255,255,255,0.85);
+      border-radius: 8px;
+      padding: 0.5rem;
+    }
+    header h1 {
+      margin: 0.5rem 0;
+      font-size: 1.7rem;
+      color: #e0f7ff;
+    }
+    header a.button {
+      margin-top: 1rem;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+      display: inline-block;
+    }
+    header a.button:hover {
+      background: #0090b8;
+    }
+
+    /* MAIN BODY */
+    main.container {
+      margin-top: -2rem;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      padding: 2.5rem;
+    }
+    h2, h3 {
+      color: var(--primary);
+    }
+    p {
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* SERVICES */
+    .services .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+    .service-card {
+      background: var(--light);
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .service-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    /* CONTACT */
+    #contact {
+      background: var(--primary);
+      color: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+    }
+    #contact a {
+      color: #ffd;
+      text-decoration: underline;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      background: var(--dark);
+      color: #eee;
+      padding: 1.5rem 1rem;
+      margin-top: 2rem;
+    }
+    footer a { color: #00b4d8; }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header>
+    <img src="Screenshot_20251207_012814_Samsung Notes.jpg" alt="EXTRA ICT Solutions Logo">
+    <h1>...the world in your hands</h1>
+    <a href="#contact" class="button">Request a Quote</a>
+  </header>
+
+  <!-- CONTENT -->
+  <main class="container">
+    <section id="about">
+      <h2>About Us</h2>
+      <p><strong>EXTRA ICT SOLUTIONS LTD</strong> is a fully registered limited company dealing in computer servicing, maintenance, training, consultancy, and supplies. Established on May 30th, 2012, the company operates as a wholly privately-owned limited company with a strong technical team dedicated to delivering high-quality ICT services to both the public and private sectors.</p>
+      <p><strong>Leadership:</strong><br>
+      Executive Director: Nakigozi Rachel<br>
+      Technical Director: Ssenyonga Ezra<br>
+      Company Secretary: Kasasa Augustine</p>
+    </section>
+
+    <section id="mission">
+      <h2>Mission & Vision</h2>
+      <p><strong>Mission:</strong> Changing the state of art technology through exploring the different patterns of applied science and delivery of high-quality technological ideas and support.</p>
+      <p><strong>Vision:</strong> A world of technology empowered with full instruments of applied science to improve lives and operations in all sectors.</p>
+    </section>
+
+    <section id="services" class="services">
+      <h2>Our Services</h2>
+      <div class="grid">
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1581090468075-7e0cdfbb6792?auto=format&fit=crop&w=800&q=80" alt="Computer maintenance">
+          <h3>Computer & Laptop Supplies</h3>
+          <p>High-quality computer, printer, and laptop equipment with reliable after-sales support.</p>
+        </div>
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981d?auto=format&fit=crop&w=800&q=80" alt="Networking">
+          <h3>Networking & PBX Installations</h3>
+          <p>Expert setup and maintenance of wired and wireless networks for organizations.</p>
+        </div>
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=800&q=80" alt="Software">
+          <h3>Software Solutions</h3>
+          <p>Custom software, database, and information system development tailored to your needs.</p>
+        </div>
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="Training">
+          <h3>ICT Training & Consultancy</h3>
+          <p>Empowering individuals and businesses with practical technology skills and advice.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="why">
+      <h2>Why Choose Us</h2>
+      <ul>
+        <li><strong>Professionalism:</strong> Skilled and competent personnel ensuring client satisfaction.</li>
+        <li><strong>Integrity:</strong> Honesty, transparency, and ethical service delivery.</li>
+        <li><strong>Efficiency:</strong> Dedicated IT experts providing timely results.</li>
+        <li><strong>Consistency:</strong> Reliable service and dependable customer support.</li>
+        <li><strong>Client Satisfaction:</strong> We prioritize our clients’ needs in every project.</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p><strong>Address:</strong> Kansanga Gaba Rd, P.O. Box 268111 Kampala (U)</p>
+      <p><strong>Tel:</strong> 0755890406 / 0776322266</p>
+      <p><strong>Email:</strong> <a href="mailto:extraictsolutionsltd@ymail.com">extraictsolutionsltd@ymail.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <small>© 2025 EXTRA ICT SOLUTIONS LTD • Designed with professionalism and innovation</small>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===============================
+   LIGHT MODE
+   =============================== */
+:root {
+  --button-outline: rgba(0, 0, 0, .10);
+  --badge-outline: rgba(0, 0, 0, .05);
+  --opaque-button-border-intensity: -8;
+  --elevate-1: rgba(0, 0, 0, .03);
+  --elevate-2: rgba(0, 0, 0, .08);
+
+  --background: 0 0% 100%;
+  --foreground: 0 0% 10%;
+  --border: 0 0% 90%;
+
+  --card: 0 0% 98%;
+  --card-foreground: 0 0% 10%;
+  --card-border: 0 0% 94%;
+
+  --sidebar: 0 0% 96%;
+  --sidebar-foreground: 0 0% 10%;
+  --sidebar-border: 0 0% 92%;
+
+  --popover: 0 0% 94%;
+  --popover-foreground: 0 0% 10%;
+  --popover-border: 0 0% 90%;
+
+  --primary: 210 100% 35%;
+  --primary-foreground: 210 100% 98%;
+  --secondary: 0 0% 92%;
+  --secondary-foreground: 0 0% 10%;
+
+  --muted: 210 5% 90%;
+  --muted-foreground: 210 5% 35%;
+
+  --accent: 195 100% 43%;
+  --accent-foreground: 195 100% 10%;
+
+  --destructive: 0 84% 40%;
+  --destructive-foreground: 0 84% 98%;
+
+  --input: 0 0% 70%;
+  --ring: 210 100% 35%;
+}
+
+/* ===============================
+   DARK MODE
+   =============================== */
+.dark {
+  --background: 0 0% 5%;
+  --foreground: 0 0% 95%;
+  --border: 0 0% 15%;
+  --card: 0 0% 7%;
+  --card-foreground: 0 0% 95%;
+  --sidebar: 0 0% 9%;
+  --sidebar-foreground: 0 0% 95%;
+  --popover: 0 0% 12%;
+  --popover-foreground: 0 0% 95%;
+  --primary: 210 100% 50%;
+  --secondary: 0 0% 16%;
+  --muted: 210 5% 18%;
+  --accent: 195 100% 25%;
+  --destructive: 0 84% 35%;
+  --input: 0 0% 30%;
+  --ring: 210 100% 50%;
+}
+
+/* ===============================
+   BASE STYLES (NO @apply border-border)
+   =============================== */
+@layer base {
+  * {
+    border-width: 1px;
+    border-style: solid;
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    font-family: var(--font-sans, system-ui, sans-serif);
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* ===============================
+   UTILITIES
+   =============================== */
+@layer utilities {
+  input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+  }
+
+  [contenteditable][data-placeholder]:empty::before {
+    content: attr(data-placeholder);
+    color: hsl(var(--muted-foreground));
+    pointer-events: none;
+  }
+}
+
+/* ===============================
+   EFFECTS
+   =============================== */
+.hero-parallax {
+  background-attachment: fixed;
+}
+
+.bg-grain {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMyIgaGVpZ2h0PSIzIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxjaXJjbGUgY3g9IjEuNSIgY3k9IjEuNSIgcj0iMS41IiBmaWxsPSIjZmZmZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz48L3N2Zz4=");
+  background-repeat: repeat;
+  opacity: 0.4;
+}
+@layer base {
+  * {
+    border-width: 0;
+  }
+}
