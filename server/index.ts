@@ -5,17 +5,21 @@ import cors from "cors";
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Middleware
 app.use(cors());
 
-// Serve static files from dist
-const distPath = path.join(process.cwd(), "dist");
+// Absolute path to dist
+const distPath = path.resolve(process.cwd(), "dist");
+
+// Serve static assets
 app.use(express.static(distPath));
 
-// SPA fallback
+// SPA fallback (THIS IS THE FIX)
 app.get("*", (_req, res) => {
   res.sendFile(path.join(distPath, "index.html"));
 });
 
+// Start server
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
