@@ -1,25 +1,26 @@
 import express from "express";
-import path from "path";
 import cors from "cors";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middleware
+// ESM-safe __dirname
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// dist is at project root
+const distPath = path.resolve(__dirname, "../dist");
+
 app.use(cors());
-
-// Absolute path to dist
-const distPath = path.resolve(process.cwd(), "dist");
-
-// Serve static assets
 app.use(express.static(distPath));
 
-// SPA fallback (THIS IS THE FIX)
+// SPA fallback
 app.get("*", (_req, res) => {
   res.sendFile(path.join(distPath, "index.html"));
 });
 
-// Start server
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
